@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Hands-On 1 </title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+            background-image: url(cgrap3.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .kwando {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+         h1{
+            font-size: 2em;
+         }
+
+         .skit {
+            border-radius: 8px;
+            color: beige;
+            background-image: url(cgrap1.jpg);
+            background-size: cover;
+            height: 80vh;
+            width: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 10px;
+         }
+
+         .btn-container {
+            width: 400px;
+            height: 200px;
+            background-image: url(cgrap2.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px 50px 50px 50px;
+        }
+
+        button{
+            color: beige;
+            background-color: rgba(201, 138, 44, 0.158);
+            border-style: none;
+            border-radius: 10px;
+            margin: 10px;
+            height: 30%;
+            width: 80%;
+            transition: background-color .3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(201, 151, 44, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .wrapper {
+                width: 100%;
+                text-align: center;
+                border-radius: 0;
+                background-color: rgba(83, 42, 59, 0);
+                backdrop-filter: blur(1px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="kwando">
+        <div class="skit">
+            <h1>Javascript addEventListener() Hands-On</h1>
+            <p></p>
+            <div class="btn-container">
+                <button id="Btn1">BUTTON 1</button>
+                <button id="Btn2">BUTTON 2</button>
+                <button id="Btn3">BUTTON 3</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let btn1 = document.getElementById('Btn1');
+        let btn2 = document.getElementById('Btn2');
+        let btn3 = document.getElementById('Btn3');
+
+        btn1.addEventListener('click', btn1Function);
+        btn2.addEventListener('click', btn2Function);
+        btn3.addEventListener('click', btn3Function);
+
+        function btn1Function(){
+            window.alert("Button 1 was clicked!")
+        }
+        function btn2Function(){
+            window.alert("Button 2 was clicked!")
+        }
+        function btn3Function(){
+            window.alert("Button 3 was clicked!")
+        }
+    </script>
+</body>
+</html>
